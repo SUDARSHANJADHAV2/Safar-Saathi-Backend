@@ -1,0 +1,49 @@
+1. The Core Entities (Standard)
+These remain exactly as we discussed.
+
+1. Users: user_id, name, email, role, password.
+
+2. Packages: pkg_id, name, price, vendor_id, image_url.
+
+3. Trips: trip_id, customer_id, package_id, name, status.
+
+4. Bookings: booking_id, trip_id, status, date.
+
+5. Transportation
+Instead of distinct arrival/departure/seat fields, just use generic descriptions.
+
+trans_id (PK)
+
+trip_id (FK)
+
+type (String: "Flight", "Train")
+
+details (String: "Flight AI-202, Seat 4A, 10:00 AM")
+
+price (Decimal)
+
+
+
+
+6. Accommodation
+accom_id (PK)
+
+trip_id (FK)
+
+hotel_name (String)
+
+address (String: Just City/Area is fine)
+
+price (Decimal)
+
+
+
+
+7. Destinations
+dest_id (PK)
+
+trip_id (FK)
+
+name (String: "Eiffel Tower")
+
+description (String: "Visit in the evening")
